@@ -34,9 +34,7 @@ class Game {
         let column = this.column;
         row = cell.getAttribute('data-row') - 1;
         column = cell.getAttribute('data-column') - 1;
-
         this.round % 2 === 0 ? player = PLAYER_ONE : player = PLAYER_TWO;
-
         if (this.currentGameCombination[row][column]) return;
 
         cell.classList.add(player)
@@ -82,7 +80,7 @@ class Game {
 
                  won(wonCombination, playerWon) {
                  wonCombination.forEach(numberElement => this.cells[numberElement].style.background = 'red')
-                     alert(`${playerWon} is a winner`)
+                     alert(`${playerWon} is a winner!`)
 
                  }
 
