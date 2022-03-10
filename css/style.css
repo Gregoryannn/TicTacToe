@@ -30,11 +30,11 @@
     transition: background-color .3s;
 }
 
-    .game__field:hover {
+.game__field:hover {
         background-color: rgb(255, 255, 255);
-    }
+}
 
-.round::before {
+.circle::before {
     content: '';
     display: block;
     width: 130px;

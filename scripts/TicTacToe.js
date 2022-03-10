@@ -1,4 +1,4 @@
-const PLAYER_ONE = 'round';
+const PLAYER_ONE = 'circle';
 const PLAYER_TWO = 'cross';
 
 
@@ -55,12 +55,14 @@ class Game {
 
                 palyerPositions.push(i);
             }
-            if (palyerPositions.length >= 3) this.checkCombinations(palyerPositions)
+
+            if (palyerPositions.length >= 3) this.checkCombinations(palyerPositions, player)
+
         }
 
 
-          checkCombinations(palyerPositions) {
 
+    checkCombinations(palyerPositions, player) {
              const winCombinations = this.winGameCombinations;
              let compatibility = 0;
 
@@ -70,7 +72,7 @@ class Game {
                             if (combination.includes(position)) compatibility++;
                             if (compatibility === 3) {
                                 this.isWin = true
-                                this.won(combination)
+                                this.won(combination, player)
                             };
                         })
                  }
@@ -78,10 +80,11 @@ class Game {
               if (this.round > 9 && !this.isWin) alert('Draw')
                }
 
-                 won(wonCombination) {
+                 won(wonCombination, playerWon) {
                  wonCombination.forEach(numberElement => this.cells[numberElement].style.background = 'red')
-                 this.cells.forEach(cell => cell.removeEventListener('click', () => this.selectCell(cell)))
-            }
+                     alert(`${playerWon} is a winner`)
+
+                 }
 
                     addListenersOnElements(){
                         this.cells.forEach(cell => cell.addEventListener('click', () => this.selectCell(cell)))
