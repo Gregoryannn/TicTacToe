@@ -9,5 +9,5 @@ That player will have won the match, and the player will lose the game who does 
 
 ## 📷 UI!
 
-![tic-tac-toe_1](https://user-images.githubusercontent.com/32854050/157657278-3aeafe82-450d-4bd3-bf53-24eecaa9a0ff.jpg)
-![tic-tac-toe_2](https://user-images.githubusercontent.com/32854050/157657276-7767987f-b2d9-443f-97b5-48a6e488f999.jpg)
+![TicTacToe](https://user-images.githubusercontent.com/32854050/157657889-cce0fb9c-6b27-49c1-b0a3-3bee41398fce.jpg)
+
